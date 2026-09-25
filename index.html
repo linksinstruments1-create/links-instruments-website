@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Links Instruments - Premium beauty tools and professional nail instruments.">
+  <title>Links Instruments | Premium Beauty Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#home" class="brand">
+    <img src="images/logo.png" alt="Links Instruments logo"
+         onerror="this.style.display='none'">
+    <span>LINKS <small>INSTRUMENTS</small></span>
+  </a>
+
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="cart-button" id="cartButton">
+      Bag <span id="cartCount">0</span>
+    </button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">LINKS INSTRUMENTS</p>
+      <h1>Precision tools.<br><em>Beautiful results.</em></h1>
+      <p>
+        Discover premium beauty tools designed for precision,
+        care, and professional results.
+      </p>
+
+      <div class="actions">
+        <a href="#shop" class="btn gold">Shop Collection</a>
+        <a href="#contact" class="btn outline">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img src="images/hero-tools.jpg"
+           alt="Premium beauty instruments"
+           onerror="this.src='https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1000&q=85'">
+      <div class="gold-label">BEAUTY · PRECISION · CARE</div>
+    </div>
+  </section>
+
+  <!-- CATEGORY SHORTCUTS -->
+  <section class="categories" id="shop">
+    <div class="section-title">
+      <p class="eyebrow">EXPLORE OUR COLLECTION</p>
+      <h2>Shop by <em>Category</em></h2>
+      <p>Find the right tools for your beauty routine.</p>
+    </div>
+
+    <div class="category-grid" id="categoryGrid"></div>
+  </section>
+
+  <!-- PRODUCT CATALOG -->
+  <section class="products-section" id="catalog">
+    <div class="section-title">
+      <p class="eyebrow" id="catalogEyebrow">OUR COLLECTION</p>
+      <h2 id="catalogTitle">All <em>Products</em></h2>
+      <p id="catalogDescription">Explore our professional beauty tools.</p>
+    </div>
+
+    <div class="catalog-top">
+      <button class="back-button" id="backToCategories" hidden>
+        ← All Categories
+      </button>
+
+      <div class="filters">
+        <input id="searchInput" type="search"
+               placeholder="Search products..."
+               aria-label="Search products">
+
+        <select id="categoryFilter" aria-label="Filter products">
+          <option value="all">All Categories</option>
+          <option value="Scissors">Scissors</option>
+          <option value="Tweezers">Tweezers</option>
+          <option value="Nail Foilers">Nail Foilers</option>
+          <option value="Foot Foilers">Foot Foilers</option>
+          <option value="Nippers & Clippers">Nippers & Clippers</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+    <p class="no-results" id="noResults" hidden>No products found.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div>
+      <p class="eyebrow">OUR STORY</p>
+      <h2>Beauty tools,<br><em>with purpose.</em></h2>
+    </div>
+    <div>
+      <p>
+        Welcome to Links Instruments. Explore our collection
+        of beauty and nail tools, from scissors and tweezers
+        to nail and foot foilers.
+      </p>
+      <p class="muted">
+        Contact us for product details, availability,
+        and orders.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <p class="eyebrow">LET'S CONNECT</p>
+    <h2>Find your perfect tool.</h2>
+    <p>Message us for product details and orders.</p>
+
+    <div class="actions center">
+      <a class="btn gold" id="instagramLink" href="#" target="_blank" rel="noopener">
+        Instagram ↗
+      </a>
+      <a class="btn whatsapp" id="whatsappLink" href="#" target="_blank" rel="noopener">
+        WhatsApp ↗
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" hidden></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+  <div class="cart-header">
+    <h2>Your <em>Bag</em></h2>
+    <button id="closeCart" class="close-button" aria-label="Close bag">×</button>
+  </div>
+
+  <div id="cartItems" class="cart-items"></div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Items</span>
+      <strong id="cartTotal">0</strong>
+    </div>
+    <button id="checkoutButton" class="btn gold full">
+      Order on WhatsApp →
+    </button>
+    <p class="cart-note">
+      Your order will be sent to WhatsApp for confirmation.
+    </p>
+  </div>
+</aside>
+
+<footer>
+  <p>© <span id="year"></span> Links Instruments. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
